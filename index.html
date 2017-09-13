@@ -16,6 +16,14 @@
           to see my dynamically bound title!
         </span>
     </div>
+    <!-- conditionals -->
+    <div class="" id="condi">
+      <input type="checkbox" name="check" v-model="seen">
+       <p v-if="seen">
+         This is not seen
+       </p>
+
+    </div>
 
     <script type="text/javascript">
       var app=new Vue({
@@ -28,6 +36,10 @@
           message: 'You loaded this page on ' + new Date().toLocaleString()
         }
       })
+      var app3=new Vue({
+        el:'#condi',
+        data:{seen:true}
+      });
     </script>
   </body>
 </html>
